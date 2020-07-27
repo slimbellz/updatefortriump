@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+
 
 body {
     font-family: sans-serif;
@@ -53,7 +60,7 @@ body {
     animation-delay: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
-    font-family: 'Tangerine', sans-serif, cursive;
+    font-family: sans-serif, cursive;
     text-transform: uppercase;
     line-height: 50px;
     margin-bottom: 15px;
@@ -67,7 +74,7 @@ body {
     animation: fromRight;
     animation-duration: 4s;
     animation-delay: 2s;
-    font-family: 'Tangerine', sans-serif, cursive;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -86,7 +93,7 @@ body {
     }
 }
 
-.main-btn {
+/*.main-btn {
     color: #86203d;
     font-size: 2rem;
     border: 2px solid #86203d;
@@ -105,7 +112,7 @@ body {
     animation-delay: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
-}
+}*/
 
 @keyframes fromRight {
     0% {
@@ -168,24 +175,27 @@ body {
 .navbar-brand {
     font-size: 30px;
     transition: all 1s ease;
+    color: green;
 }
 
 .navbar-brand:hover {
-    color: #242424;
+    color: #fff;
 }
 
 .nav-link {
-    color: #242424;
+    color: green;
     text-decoration: none;
     transition: all 2s ease;
-    font-size: 23px;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Bilbo', cursive;
 }
 
 .nav-link:hover {
-    color: #d3325f;
+    color: #fff;
 }
 
-.nav-btn {
+/*.nav-btn {
     background: transparent;
     color: #d3325f;
     border: 2px solid #d3325f;
@@ -197,10 +207,10 @@ body {
     color: #242424;
     border: 2px solid #242424;
     transform: rotate(10deg);
-}
+}*/
 
 .toggler-btn {
-    border: 2px solid #d3325f;
+    border: 2px solid #86203d;
     padding: 5px;
     transition: all 2s ease;
 }
@@ -209,7 +219,7 @@ body {
     width: 30px;
     height: 3px;
     margin: 5px;
-    background: #d3325f;
+    background: green;
     transition: all 0.5s ease;
 }
 
@@ -227,56 +237,260 @@ body {
 
 /* End of Navbar */
 
+/* About page */
 
-/* pastry items */
+.about, .services, .ourteam, .contact, .title {
+    padding: 2% 2%;
+    text-align: center;
+}
 
-.item-container {
+h1 {
+    margin-bottom: 20px;
+    color: lawngreen;
+    font-size: 1.9rem;
+    word-spacing: .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h4, h5 {
+    text-align: center;
+    color: #5c4a4a;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    word-spacing: .15rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 20px;
+    color: rgb(27, 4, 4);
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    word-spacing: .15rem;
+    letter-spacing: .1rem;
+    font-weight: 550;
+    text-align: center;
+}
+
+
+/* our services */
+
+.all-items-wrapped {
+    background: #cfc5c5;
+    background-position: center;
+    background-size: cover;
+}
+
+.all-items-wrapped h3 {
+    text-align: center;
+    color: #5c4a4a;
+    font-size: 1.5rem;
+    word-spacing: .15rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+/* Our team */
+
+#our-team-wapper {
+    padding: 10rem 0;
+    background-color: #fff;
+}
+
+#our-team-wapper .heading {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #333;
     position: relative;
-    /* for the link */
-    overflow: hidden;
-    background: linear-gradient(rgb(0,0,0),rgb(0,0,0));
-    transition: all 2s ease;
 }
 
-
-.item-img {
-    transition: all 2s ease;
-}
-
-.item-container:hover .item-img {
-    transform: scale(1.2);
-    opacity: 0.5;
-}
-
-.item-link {
+#our-team-wapper .heading::after {
+    content: "";
+    width: 10rem;
+    height: .8rem;
+    background-color: #45e19f;
     position: absolute;
-    top: 50%;
+    bottom: -2rem;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #d3325f;
-    font-size: 2rem;
-    border-top: 3px solid #d3325f;
-    border-bottom: 3px solid #d3325f;
-    transition: all 2s ease;
-    opacity: 0;
+    transform: translateX(-50%);
+    border-radius: 2rem;
 }
 
-.item-container:hover .item-link {
-    opacity: 1;
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 32rem;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.card .card-img {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+}
+
+.profile-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -11rem;
+    z-index: 999;
+    border: 1rem solid #ebeef8;
+}
+
+.card h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+.job-title {
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 
-.item-link:hover {
-    color: #c9c1ac;
-    border: 3px solid #c9c1ac;
-    background: #c9c1ac;
-    color: #242424;
+.about {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: #333;
 }
 
-.item-container:hover {
-    outline: 10px solid #d3325f;
-    outline-offset: 0.8rem;
+.card .btn {
+    padding: 1rem 2.5rem;
+    background-color: #445ae3;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 1.4rem;
+    transition: all .5s;
 }
+
+.card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.card .btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.social-media {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.social-media i {
+    font-size: 3rem;
+    transition: color .5s;
+}
+
+.fa-facebook-square {
+    color: #3b5999;
+}
+
+.fa-twitter-square {
+    color: #55acee;
+}
+
+.fa-instagram {
+    color: #c6683c;
+}
+
+.fa-google-plus-square {
+    color: #dd4b39;
+}
+
+.fa-facebook-square:hover,
+.fa-twitter-square:hover,
+.fa-instagram:hover,
+.fa-google-plus-square:hover {
+    color: #45e19f;
+}
+
+@media screen and (min-width: 700px) {
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        margin: 2rem;
+        transition: transform .5s;
+    }
+
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+
+        to{
+            opacity: 1;
+        }
+    }
+    
+    .card:nth-child(1) {
+        animation: fadeIn .5s .5s backwards;
+    }
+
+    .card:nth-child(2) {
+        animation: fadeIn .5s 1s backwards;
+    }
+
+    .card:nth-child(3) {
+        animation: fadeIn .5s 1.5s backwards;
+    }
+
+    .card:nth-child(4) {
+        animation: fadeIn .5s 2s backwards;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+       
+}
+
+
+
 
 /* aboutcakes*/
 
