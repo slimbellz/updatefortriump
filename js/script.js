@@ -35,7 +35,7 @@ $(document).ready(function(){
     $("#header, .info, #contactus").ripples({
         dropRadius: 25,
         perturbance: 1,
-      });
+    });
       //magnific popup
       $('.parent-container').magnificPopup({
         delegate: 'a', // child items selector, by clicking on it popup will open
@@ -46,5 +46,11 @@ $(document).ready(function(){
         }
         // other options
       });
+
+      //animation effect
+      AOS.init({
+          easing: 'ease',
+          duration: 1000,  
+        });
 
 });
