@@ -19,7 +19,7 @@ $(document).ready(function(){
     })
 
     //smooth scroll
-    $('.nav-items a, .header-link, #back-to-top').click(function(link){
+    $('.nav-item a, .header-link, .header-link2, #back-to-top').click(function(link){
         link.preventDefault();
 
         let target = $(this).attr('href');
@@ -32,9 +32,9 @@ $(document).ready(function(){
 
 
 
-    $("#header, .info").ripples({
+    $("#header, .info, #contactus").ripples({
         dropRadius: 25,
-        perturbance: 0.6,
+        perturbance: 1,
       });
       //magnific popup
       $('.parent-container').magnificPopup({
